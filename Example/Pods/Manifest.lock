@@ -1,0 +1,16 @@
+PODS:
+  - MZFBManager (0.1.0)
+
+DEPENDENCIES:
+  - MZFBManager (from `../`)
+
+EXTERNAL SOURCES:
+  MZFBManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MZFBManager: 5e02a7c80605777db931dc8a7b614a9910613aa5
+
+PODFILE CHECKSUM: 0846f4ae236aa7cbf3f69d48ef9b0f519c554757
+
+COCOAPODS: 1.5.3
