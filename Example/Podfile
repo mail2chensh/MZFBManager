@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MZFBManager_Example' do
+  pod 'MZFBManager', :path => '../'
+
+  target 'MZFBManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
