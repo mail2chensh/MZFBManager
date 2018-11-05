@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #   'MZFBManager' => ['MZFBManager/Assets/*.png']
   # }
 
-   s.public_header_files = 'Pod/Classes/MZRedButton.h'
+   s.public_header_files = 'MZFBManager/Classes/MZRedButton.h'
   
   # s.frameworks = 'UIKit', 'MapKit'
   
