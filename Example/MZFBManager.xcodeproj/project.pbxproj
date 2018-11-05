@@ -62,11 +62,11 @@
 		77CA940192AA43D07CD5CC0C /* Pods-MZFBManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFBManager_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZFBManager_Tests/Pods-MZFBManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B4649F4AD6837EA81A005FA /* Pods-MZFBManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFBManager_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZFBManager_Example/Pods-MZFBManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9004B4F832EE1C647F902D4C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		AE75F79345303591E0F055BF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9004B4F832EE1C647F902D4C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AE75F79345303591E0F055BF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DB981554C32D8AA4D32ABA3E /* Pods-MZFBManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFBManager_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZFBManager_Tests/Pods-MZFBManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E34D216D405C938CCEA46038 /* Pods-MZFBManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFBManager_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZFBManager_Example/Pods-MZFBManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F0388F0912060E0448375E88 /* MZFBManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MZFBManager.podspec; path = ../MZFBManager.podspec; sourceTree = "<group>"; };
+		F0388F0912060E0448375E88 /* MZFBManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MZFBManager.podspec; path = ../MZFBManager.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				B86602D8F95C2FCD2B19B229 /* [CP] Embed Pods Frameworks */,
+				66472DE21028A7A327DAD6C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +247,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = chensh;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = P68334AC4C;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -294,6 +298,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		66472DE21028A7A327DAD6C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MZFBManager_Example/Pods-MZFBManager_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MZFBManager/MZFBManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFBManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZFBManager_Example/Pods-MZFBManager_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		84B14D8731E5BE4839386D51 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,24 +332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B86602D8F95C2FCD2B19B229 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MZFBManager_Example/Pods-MZFBManager_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MZFBManager/MZFBManager.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFBManager.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZFBManager_Example/Pods-MZFBManager_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA9B953FD55CB71D8A52B2CD /* [CP] Check Pods Manifest.lock */ = {
@@ -485,12 +489,15 @@
 			baseConfigurationReference = E34D216D405C938CCEA46038 /* Pods-MZFBManager_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = P68334AC4C;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MZFBManager/MZFBManager-Prefix.pch";
 				INFOPLIST_FILE = "MZFBManager/MZFBManager-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = dev_wildcard;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -500,12 +507,15 @@
 			baseConfigurationReference = 7B4649F4AD6837EA81A005FA /* Pods-MZFBManager_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MZFBManager/MZFBManager-Prefix.pch";
 				INFOPLIST_FILE = "MZFBManager/MZFBManager-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "MZRedButton.h"
 
 FOUNDATION_EXPORT double MZFBManagerVersionNumber;
 FOUNDATION_EXPORT const unsigned char MZFBManagerVersionString[];

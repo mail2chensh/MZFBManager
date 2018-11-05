@@ -7,6 +7,8 @@
 //
 
 #import "MZViewController.h"
+#import <MZFBManager/MZRedButton.h>
+
 
 @interface MZViewController ()
 
@@ -18,6 +20,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    MZRedButton *button = [[MZRedButton alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
+    [self.view addSubview:button];
 }
 
 - (void)didReceiveMemoryWarning
